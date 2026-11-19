@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../config.php';
 if (is_admin()) { header('Location: index.php'); exit; }
-$error = '';
+$error = isset($_GET['expired']) ? 'Your session expired. Please log in again.' : '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_check();
     if (($_SESSION['fails'] ?? 0) >= 5 && time() - ($_SESSION['fail_time'] ?? 0) < 300) {
@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($u && password_verify((string)($_POST['password'] ?? ''), $u['password_hash'])) {
             session_regenerate_id(true);
             $_SESSION['admin_id'] = (int)$u['id'];
+            $_SESSION['last'] = time();
             $_SESSION['fails'] = 0;
             header('Location: index.php'); exit;
         }
@@ -24,11 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Login</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="admin.css"></head>
-<body><main class="admin-wrap narrow">
+<body><main class="login-box">
+<a href="../index.php" class="logo">Lhonna</a>
 <h1>Admin Login</h1>
-<?php if ($error): ?><p class="admin-error"><?= e($error) ?></p><?php endif; ?>
-<form method="post" class="contact-form"><?= csrf_field() ?>
-<label for="username">Username</label><input id="username" name="username" required maxlength="50" autocomplete="username">
-<label for="password">Password</label><input id="password" name="password" type="password" required autocomplete="current-password">
+<?php if ($error): ?><p class="flash bad"><?= e($error) ?></p><?php endif; ?>
+<form method="post" class="card form"><?= csrf_field() ?>
+<label>Username<input name="username" required maxlength="50" autocomplete="username"></label>
+<label>Password<input name="password" type="password" required autocomplete="current-password"></label>
 <button class="btn" type="submit">Log in</button></form>
 </main></body></html>
