@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lhonna Jane's personal portfolio showcasing her skills, education, and creative projects.">
+  <title>Lhonna Jane | Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="#home">Lhonna Jane.</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="small-title">HOWDY, WELCOME TO MY PORTFOLIO!</p>
+        <h1>Hello, I'm <span>Lhonna Jane.</span></h1>
+        <h2 id="typingText" data-text="If it's meant to be, it will be."></h2>
+        <p>Welcome to my personal portfolio website. Here you can learn more about me, my skills, projects, and experiences. I enjoy exploring technology, creativity, and new ideas while continuously learning and building my skills.</p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn">Learn More</a>
+          <a href="#contact" class="btn secondary-btn">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="profile.jpg.webp" alt="Portrait of Lhonna Jane">
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="page-header">
+        <p>WHO AM I?</p>
+        <h1>About Me</h1>
+        <p>A little introduction about who I am, my education, goals, and interests.</p>
+      </div>
+      <section class="content-section">
+        <article class="about-card">
+          <h2>Biography</h2>
+          <p>Hello! I'm Lhonna Jane, a student interested in technology, creativity, design, and learning new skills. This portfolio showcases some of my academic work, projects, and personal interests.</p>
+        </article>
+        <article class="about-card">
+          <h2>Education</h2>
+          <p>I am currently pursuing my studies in Information Technology. Throughout my studies, I have developed skills in web development, multimedia, animation, networking, and computer-related technologies.</p>
+        </article>
+        <article class="about-card">
+          <h2>My Goal</h2>
+          <p>My goal is to continue improving myself, gain useful knowledge and skills, and become successful in life while doing something meaningful.</p>
+        </article>
+        <article class="about-card">
+          <h2>Interests</h2>
+          <p>My interests include web design, animation, creative projects, technology, music, entertainment, and exploring different cultures.</p>
+        </article>
+      </section>
+    </section>
+
+    <section id="skills">
+      <div class="page-header">
+        <p>WHAT CAN I DO?</p>
+        <h1>My Skills</h1>
+        <p>Some of the technical and creative skills I have developed.</p>
+      </div>
+      <h2 class="skill-group">Technical</h2>
+      <section class="skills-container">
+        <article class="skill-card"><div class="skill-icon">💻</div><h2>HTML</h2><p>Creating structured web pages.</p></article>
+        <article class="skill-card"><div class="skill-icon">🎨</div><h2>CSS</h2><p>Designing and styling websites.</p></article>
+        <article class="skill-card"><div class="skill-icon">⚡</div><h2>JavaScript</h2><p>Adding interaction to websites.</p></article>
+      </section>
+      <h2 class="skill-group">Creative</h2>
+      <section class="skills-container">
+        <article class="skill-card"><div class="skill-icon">🖌️</div><h2>Graphic Design</h2><p>Creating visual designs and layouts.</p></article>
+        <article class="skill-card"><div class="skill-icon">🎬</div><h2>Animation</h2><p>Creating animated multimedia projects.</p></article>
+      </section>
+      <h2 class="skill-group">Soft Skills</h2>
+      <section class="skills-container">
+        <article class="skill-card"><div class="skill-icon">🤝</div><h2>Teamwork</h2><p>Working effectively with others.</p></article>
+        <article class="skill-card"><div class="skill-icon">🗣️</div><h2>Storytelling</h2><p>Expressing ideas in a creative way.</p></article>
+        <article class="skill-card"><div class="skill-icon">👩‍🍳</div><h2>Cooking</h2><p>Exploring recipes and cooking techniques.</p></article>
+      </section>
+    </section>
+
+    <section id="projects">
+      <div class="page-header">
+        <p>WHAT HAVE I CREATED?</p>
+        <h1>My Projects</h1>
+        <p>Here are some of the projects I worked on in school and on my own.</p>
+      </div>
+      <section class="project-section">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="web" type="button">Web</button>
+          <button class="filter-btn" data-filter="networking" type="button">Networking</button>
+          <button class="filter-btn" data-filter="animation" type="button">Animation</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-category="animation">
+            <div class="project-images"><img src="icecream1.png" alt="Tamis and Co. four-flavor ice cream advertisement"></div>
+            <div class="project-content"><span>Animation</span><h2>Ice Cream Advertisement</h2><p>An animated ice cream advertisement created as a midterm project, featuring four flavors.</p><p class="technology"><strong>Technology:</strong> Adobe Animate</p></div>
+          </article>
+          <article class="project-card" data-category="animation">
+            <div class="project-images"><img src="project2.png" alt="Space-themed animation project"></div>
+            <div class="project-content"><span>Animation</span><h2>Space-themed Animation</h2><p>A space-themed animation featuring a rocket, planets, asteroids, and motion paths.</p><p class="technology"><strong>Technology:</strong> Adobe Animate</p></div>
+          </article>
+          <article class="project-card" data-category="web">
+            <div class="project-images"><img src="project3.png" alt="One-page website activity"></div>
+            <div class="project-content"><span>Web</span><h2>One-Page Website Activity</h2><p>A basic one-page website layout featuring profile information, skills, education, projects, and a contact section.</p><p class="technology"><strong>Technology:</strong> HTML · CSS</p></div>
+          </article>
+          <article class="project-card" data-category="networking">
+            <div class="project-images"><img src="project4.png" alt="Cisco Packet Tracer network topology"></div>
+            <div class="project-content"><span>Networking</span><h2>Network Configuration</h2><p>A networking activity involving network devices, switches, routers, IP addressing, and connectivity configuration.</p><p class="technology"><strong>Technology:</strong> Cisco Packet Tracer</p></div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="resume">
+      <div class="page-header">
+        <p>MY BACKGROUND</p>
+        <h1>Resume &amp; Experience</h1>
+        <p>My education, activities, training, and experiences.</p>
+      </div>
+      <section class="resume-section">
+        <article class="resume-item"><div class="resume-date">Education</div><div class="resume-content"><h2>Bachelor's Degree in Information Technology</h2><p>Currently pursuing my studies in Information Technology.</p></div></article>
+        <article class="resume-item"><div class="resume-date">Activities</div><div class="resume-content"><h2>Academic Projects</h2><p>Participated in academic activities involving web development, multimedia, animation, networking, and technology.</p></div></article>
+        <article class="resume-item"><div class="resume-date">Training</div><div class="resume-content"><h2>Technology &amp; Digital Skills</h2><p>Developed practical knowledge through classroom activities, projects, and hands-on exercises.</p></div></article>
+        <article class="resume-item"><div class="resume-date">Experience</div><div class="resume-content"><h2>Student Project Experience</h2><p>Created websites, multimedia projects, advertisements, and networking activities as part of academic requirements.</p></div></article>
+      </section>
+    </section>
+
+    <section id="contact">
+      <div class="page-header">
+        <p>LET'S CONNECT!</p>
+        <h1>Contact Me</h1>
+        <p>Have a question or want to get in touch? Feel free to send me an email.</p>
+      </div>
+      <section class="contact-section">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>Feel free to contact me through email or social media.</p>
+          <div class="contact-detail">📧 <a href="mailto:lhonnabohol@gmail.com">lhonnabohol@gmail.com</a></div>
+          <div class="contact-detail">📘 Facebook: Lhonna Jane Dantes Bohol</div>
+          <div class="contact-detail">📷 Instagram: @lhnna_122804</div>
+        </div>
+        <form id="contactForm" class="contact-form" action="mailto:lhonnabohol@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" placeholder="Enter your name" maxlength="100" required>
+          <small id="nameError"></small>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" placeholder="Enter your email" maxlength="150" required>
+          <small id="emailError"></small>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="Subject" placeholder="Enter a subject" maxlength="150" required>
+          <small id="subjectError"></small>
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="6" placeholder="Write your message" maxlength="2000" required></textarea>
+          <small id="messageError"></small>
+          <button type="submit" class="btn">Send Message</button>
+          <p id="formMessage">This form opens your email app to send the message.</p>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer style="text-align:center;padding:25px 15px;background:#1F5C42;color:white;margin-top:40px;">
+    <p>© 2026 Lhonna Jane. All Rights Reserved.</p>
+    <p><a href="#home" style="color:white;">Back to top ↑</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
